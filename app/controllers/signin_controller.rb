@@ -13,7 +13,7 @@ class SigninController < ApplicationController
                 httponly: true,
                 secure: Rails.env.production?)
             
-            render json: {token: tokens[:access], succec: "Succes Login">}
+            render json: {token: tokens[:access], succec: "Succes Login"}
         else
             not_found
         end
