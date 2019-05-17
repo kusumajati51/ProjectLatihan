@@ -12,7 +12,7 @@ class SignupController < ApplicationController
                 value: tokens[:acces],
                 httponly: true,
                 secure: Rails.env.production?)
-            render json: {token: tokens[:access], succec: "Succes Login"   }}
+            render json: {token: tokens[:access], succec: "Succes Login"   }
         else
             render json: {error: user.errors.full_messages.join(' ')}, status: :unprocessable_entity
         end
